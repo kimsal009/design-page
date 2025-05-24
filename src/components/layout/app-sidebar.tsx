@@ -64,9 +64,9 @@ export default function AppSidebar() {
   const { isOpen } = useMediaQuery();
   // const { user } = useUser();
   const router = useRouter();
-  const handleSwitchTenant = (_tenantId: string) => {
-    // Tenant switching functionality would be implemented here
-  };
+  // const handleSwitchTenant = (_tenantId: string) => {
+  //   // Tenant switching functionality would be implemented here
+  // };
 
   const activeTenant = tenants[0];
 
@@ -80,7 +80,7 @@ export default function AppSidebar() {
         <OrgSwitcher
           tenants={tenants}
           defaultTenant={activeTenant}
-          onTenantSwitch={handleSwitchTenant}
+          // onTenantSwitch={handleSwitchTenant}
         />
       </SidebarHeader>
       <SidebarContent className='overflow-x-hidden'>
