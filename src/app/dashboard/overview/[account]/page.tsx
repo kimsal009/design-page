@@ -1,12 +1,17 @@
 
 "use client"
-import { useParams } from "next/navigation";
+import { useParams, usePathname, useSearchParams } from "next/navigation";
 
 export default function Page(){
-   const param = useParams<{account: string}>()
+   const params = useParams<{account: string}>()
+   const pathname = usePathname()
+   const searchParams = useSearchParams()
    return (
     <h2 className="text-center">
-        Overview: {param.account}
+        Overview: {params.account}
+        Path Name: {pathname}
+        Search Param:{searchParams.get("id")}
+        Search Param:{searchParams.get("transacId")}
     </h2>
    ) 
 }
